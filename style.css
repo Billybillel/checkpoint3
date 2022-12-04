@@ -1,0 +1,134 @@
+:root{
+    --primaryColor:#00b39b;
+    --secondaryColor:#ababab;
+    --bgColorLight:#fff;
+    --bgcolorSecondary:#e5faf8;
+    --fontColor:#747474;
+    --bgcolor1:#1b2734;
+    --bgcolor2:#3d83df;
+    --margin:1rem 10rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondaryColor);
+    font-size: 15px;
+}
+::selection{
+    
+    background-color:var(--primaryColor);
+    color: var(--bgColorLight);
+}
+/* /////Navigation barre */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--margin);
+    
+}
+nav .logo a{
+    font-size: 2rem;
+    width: 20rem;
+    font-weight: 700;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    
+}
+nav a{
+    text-decoration: none;
+    color: var(--secondaryColor);
+   
+}
+nav  a span{
+    color: var(--primaryColor);
+}
+
+nav .nav-list ul{
+    list-style: none;
+}
+nav .nav-list ul li{
+    display: inline;
+    margin: 1rem;
+    
+}
+
+/* The mouse over the links in the navigation barre*/
+
+nav .nav-list ul li a:hover{
+    color: var(--primaryColor);
+}
+
+/* hidden menu */
+
+#dropdown-menu{
+    position: absolute;
+    right: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    box-shadow: 0 1px 1px 1px #abababa4;
+    visibility: hidden;
+    z-index: 10;
+    
+}
+
+#dropdown-menu a {
+    
+    padding: 1rem;
+}
+
+
+/* make the hidden menu visible when the mouse is over "departement" */
+
+#dropdown:hover #dropdown-menu{
+    visibility: visible;
+}
+
+/*when the mouse is over the links of the hidden menu*/
+
+#dropdown-menu a:hover{
+    background-color: var(--bgcolorSecondary);
+}
+
+/*The content section/////////////*/
+
+.content{
+    margin: var(--margin);
+
+}
+.content-u1{
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.content-u1 h3{
+
+    color: var(--primaryColor);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+.u1-text{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.u1-text p{
+    
+    line-height: 1.7rem;
+    margin: 1rem;
+    color: var(--fontColor);
+}
+
+/* cards */
