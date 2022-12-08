@@ -6,29 +6,52 @@
     --fontColor:#747474;
     --bgcolor1:#1b2734;
     --bgcolor2:#3d83df;
-    --margin:1rem 10rem;
+    --margin:2rem 8rem 4rem 8rem;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;  
 }
+h1,h2,h3,h4{
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 2rem;
+    
+}
+
+p{
+    color: var(--fontColor);
+    line-height: 1.7rem;
+    margin: 1rem;
+}
+
+
 body{
     font-family: 'Roboto', sans-serif;
     color: var(--secondaryColor);
     font-size: 15px;
+    
+    
+
+    
 }
 ::selection{
     
     background-color:var(--primaryColor);
     color: var(--bgColorLight);
 }
-/* /////Navigation barre */
+/*********************************************Navigation barre ***************************************************/
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: var(--margin);
+    margin: var(--margin); 
+    
+    
+    
     
 }
 nav .logo a{
@@ -68,14 +91,15 @@ nav .nav-list ul li a:hover{
 
 #dropdown-menu{
     position: absolute;
-    right: 11rem;
+    background-color: var(--bgColorLight);
+    right: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     box-shadow: 0 1px 1px 1px #abababa4;
     visibility: hidden;
-    z-index: 10;
+    
     
 }
 
@@ -97,12 +121,21 @@ nav .nav-list ul li a:hover{
     background-color: var(--bgcolorSecondary);
 }
 
-/*The content section/////////////*/
+/******************* Menu for Mobile and tablet***********/
 
-.content{
-    margin: var(--margin);
 
+.mobile-menu{
+    
+    display: none;
+    
 }
+
+/*************************************The content section*******************************************/
+
+ .content{
+     margin: 0 8rem;  
+
+} 
 .content-u1{
     height: 23rem;
     display: flex;
@@ -115,7 +148,7 @@ nav .nav-list ul li a:hover{
 
     color: var(--primaryColor);
     font-size: 2rem;
-    font-weight: 400;
+    
 }
 
 
@@ -124,11 +157,527 @@ nav .nav-list ul li a:hover{
     justify-content: space-evenly;
 }
 
-.u1-text p{
-    
-    line-height: 1.7rem;
-    margin: 1rem;
-    color: var(--fontColor);
-}
+
 
 /* cards */
+
+.content-u2-card{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    
+}
+.card{
+    height: 23rem;
+     width: 30%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    color: var(--bgColorLight);
+    transition: .5s;
+    overflow: hidden;
+
+}
+.card:hover{
+    opacity:0.7;
+}
+.card1,.card1 select{
+    background-color: var(--primaryColor);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    
+}
+.card2,.card2 select{
+    background-color: var(--bgcolor2);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.card3,.card3 select{
+    background-color: var(--bgcolor1);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.card-text , .card-select {
+    
+    margin-left: 2rem;
+    width: 85%;
+    font-size: 1.3rem;
+}
+.card-text img, .card-text h2, .card-text h3, .card-text h4{
+    margin-bottom: 8px;
+    color: var(--bgColorLight);
+}
+.card-select option{
+    background-color: var(--bgColorLight);
+    color: var(--bgcolor1);
+    font-size: 1rem;
+}
+
+select {
+    
+    border:  transparent;
+    color: var(--bgColorLight);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*************************************************** partner logo section ****************************/
+
+.content-u3{
+    display: flex;
+    justify-content:space-between;  
+}
+
+.u3-text{
+    width: 30%;
+    margin:3rem 0 0 1rem;
+    color: var(--primaryColor);
+    
+}
+.container-logo-links{
+     margin:3rem 0 ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 6rem;
+
+}
+.u3-logo svg, .u3-links a{
+    margin-left: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.u3-logo path{
+    fill: hsla(0,0%,67%,.7);
+    transition: .2s;
+}
+
+.u3-links img{
+   filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+   opacity: .6;
+   transition: .2s;
+}
+.u3-links img:hover{
+    opacity:1;
+    filter:unset;
+}
+.u3-logo svg:hover path {
+    fill: var(--primaryColor);
+}
+
+/***********************************************the content in the light blue background ***********************/
+
+.content-2{
+    background-color: var(--bgcolorSecondary);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    
+}
+
+/*the Logo in the background */
+
+.content-2::before{
+    content: '';
+    width: 450px;
+    height: 320px;
+    background-image: url(./images/logo.png);
+    position: absolute;
+    bottom: 0;
+    left:3%;
+    
+}
+
+/*the text in the left */
+
+.content-2-1{
+    text-align: center;
+    margin:3rem 0 0 10rem; 
+     width: 30%;  
+     z-index: 10;  
+    
+     
+   
+}
+.content-2-1 h2{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+}
+
+
+/*********************** the cards in the right**************/
+
+/* 1. the container of the cards*/
+
+.content-2-2{
+    display: flex;
+    width: 50%;
+    align-items:  baseline;
+    
+}
+/* 2. the card */
+
+.item{
+    display: flex;
+    flex-direction: column;
+     justify-content: center; 
+    width: 17rem;
+    height: 17.5rem;
+    background-color: var(--bgColorLight);
+    border-radius: .4rem;
+    margin: 1rem;
+    text-align: center; 
+    color: var(--fontColor);  
+    white-space: pre-line;
+    
+}
+.item p{
+    line-height: 1.2rem;
+}
+
+/* 3. the icones in the cards */
+
+.content-2-2 img{
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 2.5rem;
+}
+
+.item h3{
+    margin: 1rem;
+    
+}
+
+.content-2-u1 , .content-2-u2{
+        
+    z-index: 100;
+    
+
+}
+
+/****************************************************The last content with country images*************************/
+
+.content-3{
+    margin: var(--margin);
+}
+.content3-text{
+    text-align: center;
+    margin: 5rem auto;
+    width: 70%;
+    
+}
+.content3-text h2{
+    font-size: 2rem;
+}
+
+.container-country{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.country{
+    width: 309px;
+    height: 349px;
+    margin:.7rem;
+    box-shadow: 0 1px 1px 1px #ababab23 ;
+    cursor: pointer;
+    
+}
+.country img {
+    height: 278px;
+}
+.country-name{
+     display: flex;
+    justify-content: space-between; 
+    margin: 20px; 
+    color: var(--fontColor);
+    align-items: center;
+}
+
+.country:hover{
+    box-shadow: 0px 8px 8px 8px #ababab57;
+    
+
+}
+
+.btn{
+    background-color: var(--bgcolor2);
+    color: var(--bgColorLight);
+    border: transparent;
+    padding: .7rem;
+    border-radius: .4rem;
+    opacity: .8;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.join{
+    margin:6rem auto;
+    text-align: center;
+    
+}
+.join h2{
+    color:var(--bgcolor1);
+    margin-bottom: 2rem;
+}
+
+footer a, footer p{
+
+    font-size: .7rem;
+    text-decoration: none;
+    text-align: center;
+    white-space: pre-line;
+    line-height: 1rem;
+
+}
+hr{
+    opacity: .2;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************** Responsive design *********************************************/
+
+@media screen and (max-width:1000px){
+
+    /****************************** Removing Margins in small laptop screen and lower***********************/
+    .content{
+        margin: 1rem;
+        
+    } 
+    nav{
+        margin: 0;
+    }
+
+    .container-country{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    
+}  
+@media screen and (max-width:748px) {
+
+
+
+
+
+   
+    
+
+    
+    
+
+   
+    .content-u3{
+        flex-direction: column;
+        
+    }
+    .u3-text{
+        align-self: center;
+        width: 50%;
+        
+    }
+    .container-logo-links{
+        align-self: center;
+        width: 90%;
+        
+    }
+
+
+
+    .content-3{
+        margin: 2rem;
+    }
+    .content3-text{
+        width: 80%;
+    }
+    
+
+}
+
+/***************************************************************design in small tablet and smartphone*************/
+
+@media screen and (max-width:622px){
+
+    header{
+        margin: 2rem 0;
+    }
+
+     /***********************************Navigation list**********************/
+
+
+    nav .logo{
+        align-self: center;
+       
+    }
+    nav .nav-list{
+        display: none;
+       
+    }
+    
+    
+
+    .mobile-menu{
+        display: block;
+    }
+
+     /***********************************First content **********************/
+
+     .content-u1{
+        margin: 1rem 0;
+     }
+
+
+    .content-u1 h3 {
+        
+        width: 80%;
+        
+    }
+    .content-u1 img{
+        visibility: hidden;
+    }
+
+
+    .u1-text{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+        
+        
+    }
+
+    /***********************************The cards**********************/
+   
+
+    .content-u2-card{
+        display: block;
+        margin-top: 3rem ;
+    }
+    .card{
+        width: 100%;
+        
+    }
+
+    /********************************Content in the light blue background**************************/
+
+    .content-2{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin: 1rem;
+        
+        
+    }
+
+    .content-2-1 {
+        width:auto;
+        text-align: center;
+        margin: auto auto;
+        
+
+    }
+
+
+    .content-2-2{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        
+       
+        
+       
+    }
+    .content-2-u1 , .content-2-u2{
+        
+        width: 100%;
+       
+        
+
+    }
+    
+    .item{
+        width: 90%;
+        margin: .4rem auto;
+        
+        
+        
+    }
+
+}
+
+@media screen and (min-width:622px)  and (max-width:900px){
+    
+
+    
+    .content-2{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin: 1rem;
+        
+        
+    }
+
+    .content-2-1 {
+        width:auto;
+        text-align: center;
+        margin: auto auto;
+        
+
+    }
+
+    .content-2-2{
+        
+       width: 100%;
+       justify-content: center;
+    }
+
+    .content-2-u1, .content-2-u2{
+        width: 45%;
+        
+       
+
+    } 
+    
+    
+    
+
+    .content-2::before{
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .item h3{
+        margin: .5rem;
+    }
+}
+
+
+
